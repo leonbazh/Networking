@@ -223,7 +223,7 @@ As a result of the work you should provide a report with completed tasks. Each p
 
 # Deleting all the rules in the "filter" table (default).
 iptables -F
-iptables –X
+iptables -X
 ```
 ##### The following rules should be added to the file in a row:
 ##### 1) on ws1 apply a strategy where a deny rule is written at the beginning and an allow rule is written at the end (this applies to points 4 and 5)
@@ -285,7 +285,7 @@ default via 10.10.0.1 dev eth0
 - Add a screenshot of the *etc/netplan/00-installer-config.yaml* file to the report.
 ##### Call `ip r` and show that a route is added to the routing table
 - Add a screenshot with the call and output of the used command to the report.
-##### Ping r2 router from ws11 and show on r2 that the ping is reaching. To do this, use the `tcpdump -tn -i eth1`
+##### Ping r2 router from ws11 and show on r2 that the ping is reaching. To do this, use the `tcpdump -tn -i eth0`
 command.
 - Add screenshots with the call and output of the used commands to the report.
 
@@ -354,7 +354,7 @@ subnet 10.20.0.0 netmask 255.255.255.192
     option domain-name-servers 10.20.0.1;
 }
 ```
-##### 2) write `nameserver 8.8.8.8.` in a *resolv.conf* file
+##### 2) write `nameserver 8.8.8.8` in a *resolv.conf* file
 - Add screenshots of the changed files to the report.
 ##### Restart the **DHCP** service with `systemctl restart isc-dhcp-server`. Reboot the ws21 machine with `reboot` and show with `ip a` that it has got an address. Also ping ws22 from ws21.
 - Add a screenshot with the call and the output of the used commands to the report.
@@ -455,4 +455,4 @@ And finally, the cherry on the cake, let me tell you about network address trans
 
 \> *You talk about other things for a while, listening to some nice music and finishing your drinks, and then you say goodbye...*.
 
-💡 [Tap here](https://forms.yandex.ru/cloud/6418183eeb614624a5cee6b5/) **to leave your feedback on the project**. Pedago Team really tries to make your educational experience better.
+💡 [Tap here](https://forms.yandex.ru/cloud/6418183eeb614624a5cee6b5/) **to leave your feedback on the project**. Product Team really tries to make your educational experience better.
